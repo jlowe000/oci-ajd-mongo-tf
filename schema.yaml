@@ -1,0 +1,43 @@
+# Copyright (c) 2020, Oracle and/or its affiliates. All rights reserved.
+# Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl.
+title: "Mongo DB Resource Manager Stack"
+stackDescription: "Builds an Autonomous JSON Database enabling the Mongo DB end-point"
+schemaVersion: 1.1.0
+version: "20200301"
+locale: "en"
+
+variableGroups:
+  - title: "General Configuration"
+    visible: true
+    variables:
+    - tenancy_ocid
+    - region
+    - compartment_ocid
+    
+  - title: "Database Configuration"
+    visible: true  
+    variables:
+    - custom_adb_db_name
+    - custom_adb_admin_password
+
+variables:
+  region:
+    type: oci:identity:region:name
+    required: true
+    visible: true
+
+  compartment_ocid:
+    type: oci:identity:compartment:id
+    required: true
+    title: "Compartment"
+    visible: true
+
+  custom_adb_db_name:
+    type: string
+    required: true
+    title: "Database Name"
+
+  custom_adb_admin_password:
+    type: password
+    required: true
+    title: "Database Password"
