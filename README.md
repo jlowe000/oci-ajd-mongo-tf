@@ -5,7 +5,7 @@
 *Pre-Requisites:*
 
 1. An Oracle Cloud tenancy with sufficient privileges and resources to use Oracle Resource Manager and provision an Autonomous JSON Database.
-2. Mongo Shell "mongosh" downloaded and installed.
+2. Mongo Shell "mongosh" downloaded and installed. (for testing purposes only)
 
 *Steps:*
 
